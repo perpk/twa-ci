@@ -1,7 +1,6 @@
 version: '3'
 volumes:
   jenkins-data:
-  jenkins-home:
   dependency-track:
 
 services:
@@ -14,7 +13,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/bin/docker:/usr/bin/docker
       - jenkins-data:/var/lib/jenkins/
-      - jenkins-home:/var/jenkins_home
     depends_on:
       - sonar
     environment:
